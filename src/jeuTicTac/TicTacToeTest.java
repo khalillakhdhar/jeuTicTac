@@ -2,6 +2,7 @@ package jeuTicTac;
 
 import org.junit.Before;
 import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 public class TicTacToeTest {
@@ -11,5 +12,10 @@ public class TicTacToeTest {
 		@Before
 		public final void before() {
 		ticTacToe = new TictTacToe();
+		}
+		@Test
+		public void whenYOutsideBoardThenRuntimeException() {
+		exception.expect(RuntimeException.class);
+		ticTacToe.play(5, 2);
 		}
 }
