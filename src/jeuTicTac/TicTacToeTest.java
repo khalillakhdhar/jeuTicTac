@@ -16,7 +16,7 @@ public class TicTacToeTest {
 		@Test
 		public void whenYOutsideBoardThenRuntimeException() {
 		exception.expect(RuntimeException.class);
-		ticTacToe.play(5, 2);
+		ticTacToe.play(8, 2);
 		}
 		@Test
 		public void whenOccupiedThenRuntimeException() {
